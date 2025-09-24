@@ -1,5 +1,5 @@
 function greet(): string {
-    return "Hello World!"
+    return "Witaj świecie"
 }
 
 function goodbye(): string {
