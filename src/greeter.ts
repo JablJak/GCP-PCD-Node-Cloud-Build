@@ -3,7 +3,7 @@ function greet(): string {
 }
 
 function goodbye(): string {
-    return "Bye World!"
+    return "Żegnaj świecie"
 }
 
 export {greet, goodbye}
