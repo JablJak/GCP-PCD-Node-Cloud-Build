@@ -7,15 +7,19 @@ steps:
     name: 'node:22'
     entrypoint: 'npm'
     args: [ 'test' ]
-  - id: 'Build and push Docker image to repository'
-    name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: 'gcloud'
+  - name: 'docker'
     args:
-      - 'builds'
-      - 'submit'
-      - '--tag'
+      - 'build'
+      - '-t'
       - 'europe-central2-docker.pkg.dev/gcp-pcd-training/my-repository/node-proj:$SHORT_SHA'
       - '.'
+  - name: 'docker'
+    args:
+      - 'push'
+      - 'europe-central2-docker.pkg.dev/gcp-pcd-training/my-repository/node-proj:$SHORT_SHA'
+
+images:
+  - 'europe-central2-docker.pkg.dev/gcp-pcd-training/my-repository/node-proj:$SHORT_SHA'
 
 options:
   logging: CLOUD_LOGGING_ONLY
