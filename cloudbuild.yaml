@@ -17,3 +17,5 @@ steps:
       - 'europe-central2-docker.pkg.dev/gcp-pcd-training/my-repository/node-proj:$SHORT_SHA'
       - '.'
 
+options:
+  logging: CLOUD_LOGGING_ONLY
