@@ -12,7 +12,11 @@ steps:
       - 'build'
       - '-t'
       - 'europe-central2-docker.pkg.dev/gcp-pcd-training/my-repository/node-proj:$SHORT_SHA'
+      - '-e'
+      - 'USERNAME=$$USERNAME'
       - '.'
+    secretEnv:
+      - 'USERNAME'
   - name: 'docker'
     args:
       - 'push'
@@ -23,3 +27,7 @@ images:
 
 options:
   logging: CLOUD_LOGGING_ONLY
+
+availableSecrets:
+  - versionName: 'projects/864985315425/secrets/node-app-name/versions/latest'
+    env: 'USERNAME'

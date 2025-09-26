@@ -1,4 +1,4 @@
-const name = process.env['NAME']
+const name = process.env['USERNAME']
 
 function greet(): string {
     return `Witaj ${name}`
