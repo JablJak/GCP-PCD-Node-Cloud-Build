@@ -8,7 +8,7 @@ steps:
     entrypoint: 'npm'
     args: [ 'test' ]
   - name: 'docker'
-    entrypoint: 'bash'
+    entrypoint: '/bin/bash'
     args:
       - '-c'
       - |-
