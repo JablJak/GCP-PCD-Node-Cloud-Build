@@ -8,10 +8,10 @@ steps:
     entrypoint: 'npm'
     args: [ 'test' ]
   - name: 'docker'
-    entrypoint: '/bin/bash'
+    entrypoint: '/bin/sh'
     args:
       - '-c'
-      - |-
+      - |
         docker build \
         -t europe-central2-docker.pkg.dev/gcp-pcd-training/my-repository/node-proj:$SHORT_SHA \
         --build-arg USERNAME=$$USERNAME .'
