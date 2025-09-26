@@ -1,9 +1,11 @@
+const name = process.env['NAME']
+
 function greet(): string {
-    return "Witaj świecie"
+    return `Witaj ${name}`
 }
 
 function goodbye(): string {
-    return "Żegnaj świecie"
+    return `Żegnaj ${name}`
 }
 
 export {greet, goodbye}
