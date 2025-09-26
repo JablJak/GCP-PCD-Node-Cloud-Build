@@ -2,7 +2,7 @@ steps:
   - id: 'Install deps'
     name: 'node:22'
     entrypoint: 'npm'
-  - args: [ 'install' ]
+    args: [ 'install' ]
   - id: 'Run tests'
     name: 'node:22'
     entrypoint: 'npm'
