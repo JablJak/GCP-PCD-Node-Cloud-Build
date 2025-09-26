@@ -29,5 +29,6 @@ options:
   logging: CLOUD_LOGGING_ONLY
 
 availableSecrets:
-  - versionName: 'projects/864985315425/secrets/node-app-name/versions/latest'
-    env: 'USERNAME'
+  secretManager:
+    - versionName: 'projects/864985315425/secrets/node-app-name/versions/latest'
+      env: 'USERNAME'
